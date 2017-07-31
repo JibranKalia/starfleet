@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/07/31 09:30:16 by jkalia            #+#    #+#             */
+/*   Updated: 2017/07/31 10:32:03 by jkalia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h> //printf, scanf, ...
 #include <string.h> //memcpy, strlen, ...
 #include <unistd.h> //fork, write, sleep...
@@ -14,7 +26,10 @@ int main(void)
 	/*-------------------
 	launch your test here
 	--------------------*/
-	//printf("price for the art \'%s\' is %d\n", "Guernica", searchPrice(arts, "Guernica"));
+	printf("price for the art \'%s\' is %d\n", "Guernica", searchPrice(arts, "Guernica"));
+	printf("price for the art \'%s\' is %d\n", "NOTHING", searchPrice(arts, "NOTHING"));
+	printf("price for the art \'%s\' is %d\n", "blah", searchPrice(arts, "blah"));
+	printf("price for the art \'%s\' is %d\n", "Guernica", searchPrice(NULL, "Guernica"));
 
 	return (0);
 }
