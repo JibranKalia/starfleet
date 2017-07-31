@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/31 10:49:53 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/31 16:06:01 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/31 16:25:02 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int			lexcmp(void *a, void *b)
 {
-		return (strcmp(((struct s_art *)(a))->name, ((struct s_art *)(b))->name));
+	return (strcmp(((struct s_art *)(a))->name, ((struct s_art *)(b))->name));
 }
 
 void	qsort_swap(void **v, int i, int j)
