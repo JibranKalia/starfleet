@@ -25,7 +25,7 @@ int main(void)
 	dict = dictInit(100000);
 	while (arts[count] != NULL)
 	{
-		dictInsert(dict, arts[i]->name, arts[i]);
+		dictInsert(dict, arts[count]->name, arts[count]);
 		++count;
 	}
 
@@ -39,8 +39,6 @@ int main(void)
 			printf("price for the art \'%s\' is %d\n", arts[r]->name, out->price);
 		++i;
 	}
-
-
 	return (0);
 }
 
