@@ -1,25 +1,26 @@
 #ifndef HEADER_H
 # define HEADER_H
+#include <string.h>
 
 /*--------------------------------
   !! required structure
   --------------------------------*/
 
-struct  s_art {
+typedef struct  s_art {
   char *name;
   int  price;
-};
+} t_art;
 
-struct s_item {
+typedef struct s_item {
   char           *key; //here the key will be the name
   struct s_art   *value;
   struct s_item  *next;
-};
+} t_item ;
 
-struct s_dict {
+typedef struct s_dict {
   struct s_item **items;
   int           capacity; //the capacity of the array 'items'
-};
+} t_dict;
 
 /*--------------------------------
   :) function you must implement
