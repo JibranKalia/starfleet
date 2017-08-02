@@ -6,11 +6,11 @@
   --------------------------------*/
 # define CS "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 !?:;,.$&<>()+*-_="
 
-struct s_node {
+typedef struct s_node {
 	char c;
 	struct s_node *prev;
 	struct s_node *next;
-};
+} t_node;
 
 /*--------------------------------
   :) function you must implement
