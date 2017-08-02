@@ -19,7 +19,9 @@ int main(int ac, char **av)
 	launch your test here
 	--------------------*/
 
-	//printReverse(lst);
+	displayAll(lst);
+	printf("\n");
+	printReverse(lst);
 
 	return (0);
 }
