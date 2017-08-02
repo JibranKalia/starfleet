@@ -30,12 +30,10 @@ int pop(struct s_stack *stack)
 	t_item *top = stack->item;
 	if (top->next == NULL)
 	{
-		free(top);
 		stack->item = NULL;
 		return (top->idx);
 	}
 	stack->item = top->next;
-	free(top);
 	return (top->idx);
 }
 
