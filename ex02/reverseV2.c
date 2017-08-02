@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 22:33:48 by jkalia            #+#    #+#             */
-/*   Updated: 2017/08/01 22:55:39 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/08/02 14:07:04 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void printReverseV2(struct s_node *lst)
 	t_item *tmp;
 	while ((tmp = pop(top)) != NULL)
 	{
-		printf("%s ", tmp->word);
+		printf("%s", tmp->word);
+		printf("%c", top->item ? ' ' : '\n');
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 22:10:27 by jkalia            #+#    #+#             */
-/*   Updated: 2017/08/01 22:29:25 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/08/02 14:12:56 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@ void displayAll(t_node *start)
 
 void printReverse(t_node *lst)
 {
+	static int i = 0;
 	if (lst == NULL)
 		return;
+	++i;
 	printReverse(lst->next);
-	printf("%s ", lst->word);
+	--i;
+	printf("%s", lst->word);
+	printf("%c", i == 0 ? '\n' : ' ');
 }
