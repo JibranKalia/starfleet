@@ -1,14 +1,19 @@
 #ifndef HEADER_H
 # define HEADER_H
 
+#include <stdio.h> //printf, scanf, ...
+#include <string.h> //memcpy, strlen, ...
+#include <unistd.h> //fork, write, sleep...
+#include <stdlib.h> //malloc, free, exit...
+
 /*--------------------------------
   !! required structure
   --------------------------------*/
 
-struct s_node {
+typedef struct s_node {
 	char	*word;
 	struct s_node *next;
-};
+} t_node;
 
 /*--------------------------------
   :) function you must implement
@@ -16,14 +21,14 @@ struct s_node {
 
 //STACK
 
-struct s_item {
+typedef struct s_item {
   char          *word;
   struct s_item *next;
-};
+} t_item;
 
-struct s_stack {
+typedef struct s_stack {
 	struct s_item *item;
-};
+} t_stack;
 
 struct s_stack *stackInit(void);
 
