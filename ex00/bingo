@@ -1,0 +1,2 @@
+O(n^2) algorithm. Optimized but still crappy. With each pass n decreases by -1 (worst case);
+O(1) space
