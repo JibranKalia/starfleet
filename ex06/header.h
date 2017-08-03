@@ -1,13 +1,13 @@
-#ifndef HEADER_H
+#:qifndef HEADER_H
 # define HEADER_H
 
 /*--------------------------------
   !! required structure
   --------------------------------*/
-struct s_city {
+typedef struct s_city {
 	char *name;
 	struct s_city *next;
-};
+} t_city;
 
 /*--------------------------------
   :) function you must implement
