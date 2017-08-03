@@ -1,14 +1,20 @@
 #ifndef HEADER_H
 # define HEADER_H
 
+#include <stdio.h> //printf, scanf, ...
+#include <string.h> //memcpy, strlen, ...
+#include <unistd.h> //fork, write, sleep...
+#include <stdlib.h> //malloc, free, exit...
+#include <time.h>
+
 /*--------------------------------
   !! required structure
   --------------------------------*/
-struct s_node {
+typedef struct s_node {
 	int value;
 	struct s_node *random;
 	struct s_node *next;
-};
+} t_node;
 
 /*--------------------------------
   :) function you must implement
