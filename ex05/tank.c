@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/02 16:19:37 by jkalia            #+#    #+#             */
-/*   Updated: 2017/08/02 17:14:39 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/08/02 17:20:00 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ struct s_tank *initTank(void)
 {
 	t_tank *init = calloc(1, sizeof(t_tank));
 	init->n = 0;
-	init->stacks = calloc(100, sizeof(t_stack*));
-	g_capacity = 100;
+	g_capacity = 5;
+	init->stacks = calloc(g_capacity, sizeof(t_stack*));
 	return (init);
 }
 
@@ -78,7 +78,10 @@ void tankPush(struct s_tank *tank, int energy)
 		++tank->n;
 		if (g_capacity == idx)
 		{
-			printf("Not Enough space. Sorry\n");
+			g_capacity *= 2;
+			t_stack **newStacks;
+			newStacks = realloc(tank->stacks, g_capacity * sizeof(sizeof(t_stack *)));
+			tank->stacks = newStacks;
 			return;
 		}
 		t_stack *newStack = initStack();
