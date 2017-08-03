@@ -1,19 +1,26 @@
-#include <stdio.h> //printf, scanf, ...
-#include <string.h> //memcpy, strlen, ...
-#include <unistd.h> //fork, write, sleep...
-#include <stdlib.h> //malloc, free, exit...
-
 #include "header.h"
 
 int main(void)
 {
-	//struct s_tank *tank = initTank();
+	struct s_tank *tank = initTank();
+	int		ret;
+
 
 	/*-------------------
 	launch your test here
 	--------------------*/
-	//tankPush(tank, 10);
-	//tankPush(tank, 50);
+	for (int i = 0; i < 500; i++)
+	{
+		ret = rand() % 100;
+		tankPush(tank, ret);
+	}
+	visual(tank);
+	for (int i = 0; i < 100; i++)
+	{
+		tankPop(tank);
+	}
+	printf("AFTER POP\n");
+	visual(tank);
 	return (0);
 }
 
