@@ -1,0 +1,14 @@
+1) Radix Sort
+	O(nk) Time
+	O(n + k) Space
+2) Count Sort
+	O(n + r) Time
+	O(n + r) space
+3) Merge Sort
+	O(n log n) Time
+	O(n)
+
+4) TimSort
+	Best case = O(n)
+
+5) Insetion Sort
