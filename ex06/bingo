@@ -1,0 +1,5 @@
+n = Number of elements;
+w = Number of digits
+
+O(nw) time
+O(n + w) space

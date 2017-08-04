@@ -1,10 +1,15 @@
 #ifndef HEADER_H
 # define HEADER_H
 
+#include <stdio.h> //printf, scanf, ...
+#include <string.h> //memcpy, strlen, ...
+#include <unistd.h> //fork, write, sleep...
+#include <stdlib.h> //malloc, free, exit...
+
 /*--------------------------------
   !! required structure
   --------------------------------*/
-struct s_info {
+typedef struct s_info {
 	int gender;
 	int height;
 	int hairColor;
@@ -12,12 +17,12 @@ struct s_info {
 	int glasses;
 	int tattoo;
 	int piercing;
-};
+} t_info;
 
-struct s_criminal {
+typedef  struct s_criminal {
 	char *name;
 	int  description;
-};
+} t_criminal;
 
 /*--------------------------------
   :) function you must implement

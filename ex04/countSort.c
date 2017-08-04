@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/03 18:32:26 by jkalia            #+#    #+#             */
-/*   Updated: 2017/08/03 18:59:14 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/08/03 21:12:49 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 void countSort(unsigned char *utensils, int n)
 {
-	printf("%d\n", n);
 	int count[RANGE + 1];
 	char output[n];
 	int i;

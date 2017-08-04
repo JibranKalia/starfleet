@@ -1,7 +1,3 @@
-#include <stdio.h> //printf, scanf, ...
-#include <string.h> //memcpy, strlen, ...
-#include <unistd.h> //fork, write, sleep...
-#include <stdlib.h> //malloc, free, exit...
 
 #include "header.h"
 
@@ -23,11 +19,10 @@ int main(int ac, char **av)
 	launch your test here
 	--------------------*/
 
-	// sortCriminals(criminals);
-	// info = getInfo(av[1]);
-	// potentialCriminals = findPotentialCriminals(criminals, info);
-	// printCriminals(potentialCriminals);
-
+	sortCriminals(criminals);
+	info = getInfo(av[1]);
+	potentialCriminals = findPotentialCriminals(criminals, info);
+	printCriminals(potentialCriminals);
 	return (0);
 }
 
