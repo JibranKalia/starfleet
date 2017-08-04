@@ -1,8 +1,3 @@
-#include <stdio.h> //printf, scanf, ...
-#include <string.h> //memcpy, strlen, ...
-#include <unistd.h> //fork, write, sleep...
-#include <stdlib.h> //malloc, free, exit...
-#include <time.h>
 
 #include "header.h"
 
@@ -16,9 +11,9 @@ int main(void)
 	launch your test here
 	--------------------*/
 	printPlayers(players);
-	//printf("doing the merge sort...\n");
-	//players = mergeSort(players);
-	//printPlayers(players);
+	printf("doing the merge sort...\n");
+	players = mergeSort(players);
+	printPlayers(players);
 
 	return (0);
 }

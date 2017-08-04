@@ -1,14 +1,20 @@
 #ifndef HEADER_H
 # define HEADER_H
 
+#include <stdio.h> //printf, scanf, ...
+#include <string.h> //memcpy, strlen, ...
+#include <unistd.h> //fork, write, sleep...
+#include <stdlib.h> //malloc, free, exit...
+#include <time.h>
+
 /*--------------------------------
   !! required structure
   --------------------------------*/
-struct s_player {
+typedef struct s_player {
   char  *timeStamp;
   int   score;
   char  *name;
-};
+} t_player;
 
 /*--------------------------------
   :) function you must implement
