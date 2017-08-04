@@ -1,9 +1,3 @@
-#include <stdio.h> //printf, scanf, ...
-#include <string.h> //memcpy, strlen, ...
-#include <unistd.h> //fork, write, sleep...
-#include <stdlib.h> //malloc, free, exit...
-#include <time.h>
-
 #include "header.h"
 
 int main(void)
@@ -11,6 +5,7 @@ int main(void)
 	int n;
 	int *rocks;
 	int value;
+	int expected;
 
 	srand(time(NULL));
 	n = rand() % 90 + 10;
@@ -20,12 +15,21 @@ int main(void)
 	else
 		value = rocks[rand() % n];
 
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		if (rocks[i] == value)
+			break;
+	}
+	expected = (i == n) ? -1 : i;
+
 	/*-------------------
 	launch your test here
 	--------------------*/
 
 	printArray(rocks, n);
-	// printf("Value %d at index %d\n", value, searchShifted(rocks, n, value));
+	printf("value = %d\n", value);
+	printf("Value %d at index %d. Expected %d\n", value, searchShifted(rocks, n, value), expected);
 }
 
 
