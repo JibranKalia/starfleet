@@ -1,7 +1,3 @@
-#include <stdio.h> //printf, scanf, ...
-#include <string.h> //memcpy, strlen, ...
-#include <unistd.h> //fork, write, sleep...
-#include <stdlib.h> //malloc, free, exit...
 
 #include "header.h"
 
@@ -11,12 +7,12 @@ int main(int ac, char **av)
 	char *b;
 
 	if (ac == 4
-		&& strcmp(av[2], "^") == 0
-		&& strlen(av[1]) == 6
+		&& (strcmp(av[2], "^") == 0)
+		&& (strlen(av[1]) == 6)
 		&& checkBinary(av[1]) && checkBinary(av[3])) {
 		a = av[1];
 		b = av[3];
-	}else{
+	} else{
 		printf("usage: ./xor 000010 ^ 000101\n");
 		return (0);
 	}
