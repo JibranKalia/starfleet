@@ -1,8 +1,3 @@
-#include <stdio.h> //printf, scanf, ...
-#include <string.h> //memcpy, strlen, ...
-#include <unistd.h> //fork, write, sleep...
-#include <stdlib.h> //malloc, free, exit...
-
 #include "header.h"
 
 int main(int ac, char **av)
@@ -22,11 +17,10 @@ int main(int ac, char **av)
 	/*-------------------
 	launch your test here
 	--------------------*/
-	//char *sum;
-
-	//sum = getSum(a, b);
-	//printf("%s (%d)\n", sum, toInt(sum));
-
+	char *sum;
+	sum = getSum(a, b);
+	printf("%d\n", toInt(a));
+	printf("%s (%d)\n", sum, toInt(sum));
 	return (0);
 }
 
