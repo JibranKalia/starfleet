@@ -1,7 +1,3 @@
-#include <stdio.h> //printf, scanf, ...
-#include <string.h> //memcpy, strlen, ...
-#include <unistd.h> //fork, write, sleep...
-#include <stdlib.h> //malloc, free, exit...
 
 #include "header.h"
 
@@ -11,7 +7,7 @@ int main(int ac, char **av)
 	char *b;
 
 	if (ac == 4
-		&& (strcmp(av[2], "&") == 0 || strcmp(av[2], "|"))
+		&& (strcmp(av[2], "&") == 0 || strcmp(av[2], "|") == 0)
 		&& checkBinary(av[1]) && checkBinary(av[3])) {
 		a = av[1];
 		b = av[3];
