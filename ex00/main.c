@@ -1,13 +1,8 @@
-#include <stdio.h> //printf, scanf, ...
-#include <string.h> //memcpy, strlen, ...
-#include <unistd.h> //fork, write, sleep...
-#include <stdlib.h> //malloc, free, exit...
-
 #include "header.h"
 
 int main(int ac, char **av)
 {
-	int pizzaSize = 3;
+	int pizzaSize = 5;
 
 	if (ac >= 2)
 		pizzaSize = atoi(av[1]);
@@ -16,7 +11,7 @@ int main(int ac, char **av)
 	/*-------------------
 	launch your test here
 	--------------------*/
-	// printPossibleSlices(pizzaSize);
+	printPossibleSlices(pizzaSize);
 
 	return (0);
 }

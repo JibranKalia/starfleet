@@ -1,5 +1,10 @@
 #ifndef HEADER_H
 # define HEADER_H
+#include <stdio.h> //printf, scanf, ...
+#include <string.h> //memcpy, strlen, ...
+#include <unistd.h> //fork, write, sleep...
+#include <stdlib.h> //malloc, free, exit...
+
 
 /*--------------------------------
   !! required structure
@@ -16,12 +21,12 @@ void printPossibleSlices(int pizzaSize);
 
 // DYNAMIC ARRAY
 
-struct s_array {
+typedef struct s_array {
 	int *content;
 	int length;
 	int sum;
 	int capacity;
-};
+} t_array;
 
 struct s_array *arrayInit(void);
 int     arrayAppend(struct s_array *arr, int number);
