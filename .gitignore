@@ -1,52 +1,72 @@
-# Prerequisites
-*.d
+alloc_wrap.c
+out*
+test*
+sandbox*
 
-# Object files
+# Object files #
+###################
 *.o
 *.ko
 *.obj
 *.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
+# Precompiled Headers #
+###################
 *.gch
 *.pch
 
-# Libraries
+# Libraries #
+###################
 *.lib
 *.a
 *.la
 *.lo
 
-# Shared objects (inc. Windows DLLs)
+# Shared objects (inc. Windows DLLs) #
+###################
 *.dll
 *.so
 *.so.*
 *.dylib
 
-# Executables
+# Executables #
+###################
 *.exe
 *.out
 *.app
 *.i*86
 *.x86_64
 *.hex
+ft_ls
 
-# Debug files
+# Debug files #
+###################
 *.dSYM/
 *.su
-*.idb
-*.pdb
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Compiled source #
+###################
+*.o
+*.a
+*.out
+
+# OS generated files #
+###################
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+# Vim Backup Files #
+
+###################
+*.swp
+*.swo
+
+# Clion Folders #
+###################
+.idea/
+cmake-build-debug/
