@@ -1,0 +1,4 @@
+n = number of element
+k = range of input.
+O(n + k) Time
+O(n + k) Space
