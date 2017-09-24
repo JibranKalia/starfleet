@@ -1,3 +1,5 @@
+import sys
+
 class art:
     def __init__(self, name, price):
         self.name = name
@@ -21,5 +23,7 @@ if __name__ == "__main__":
                 error = False
                 array.append(art(name, int(number)))
 
-    #for i in array:
-    #    print(i)
+    for i in range(1, len(sys.argv)):
+        for j in array:
+            if j.name == sys.argv[i]:
+                print(j.price)
